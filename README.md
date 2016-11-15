@@ -1,4 +1,4 @@
-Feira API with DjangoRestramework
+Feira API with DjangoRestFramework
 =================================
 Objective: This project was made using DRF Api
 
