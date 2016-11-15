@@ -1,4 +1,4 @@
-Feira API with DjangoRestramework
+Feira API with DjangoRestFramework
 =================================
 
 Getting Started
