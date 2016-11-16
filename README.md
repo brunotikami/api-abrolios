@@ -1,19 +1,6 @@
 Feira API with DjangoRestFramework
 =================================
 
-Getting Started
----------------
-
-### Initial Setup ###
-1. Make a new virtualenv: ``virtualenv .venv``
-2. Activate the virtualenv: ``source .venv/bin/activate``
-3. Install Django: ``pip install -r requirements.txt``
-4. Edit ``feira/settings.py:108`` to match your LANGUAGE_CODE 
-5. Run the server: ``python manage.py runserver``
-6. Open website in browser at ``http://127.0.0.1:8000/feira`` or admin at ``http://127.0.0.1:8000/admin`` (admin:admin)
-7. Open website in browser at ``http://127.0.0.1:8000/feira/1/`` 
-
-
 Objetivo:
 --------- 
 Desenvolver uma API que exponha os dados disponiveis em
@@ -26,8 +13,14 @@ Utilizando os dados do arquivo “DEINFO_AB_FEIRASLIVRES_2014.csv”,
 implemente: 
 
 *  cadastro de uma nova feira; 
+   http://127.0.0.1:8000/admin/feiraapp/feira/add/
+
 *  exclusão de uma feira através de seu código de registro;
-*  alteração dos campos cadastrados de uma feira, exceto seu código de registro; 
+   http://127.0.0.1:8000/admin/feiraapp/feira/1/delete/
+
+*  alteração dos campos cadastrados de uma feira, exceto seu código de registro;
+   http://127.0.0.1:8000/admin/feiraapp/feira/1/change/
+    
 *  busca de feiras utilizando ao menos um dos parâmetros abaixo: 
     * distrito
     * regiao5
@@ -47,3 +40,30 @@ Requisitos
 * a aplicação deve gravar logs estruturados em arquivos texto; 
 * a solução do teste deve estar documentada em português ou inglês. Escolha um idioma em que você seja fluente; 
 * a documentação da solução do teste deve incluir como rodar o projeto e exemplos de requisições e suas possíveis respostas;
+
+Getting Started
+---------------
+
+### Initial Setup ###
+1. Make a new virtualenv: ``virtualenv .venv``
+2. Activate the virtualenv: ``source .venv/bin/activate``
+3. Install Django: ``pip install -r requirements.txt``
+4. Edit ``feira/settings.py:108`` to match your LANGUAGE_CODE 
+5. Run the server: ``python manage.py runserver``
+
+Solução Apresentada
+-------------------
+Desenvolvimento de API com o DjangoRestFramework
+
+Para acessar a API pelo browse
+------------------------------
+* Listagem das Feiras
+ ``http://127.0.0.1:8000/feira`` 
+
+* Detalhe de uma Feira
+ ``http://127.0.0.1:8000/feira/1/``
+
+
+``http://127.0.0.1:8000/admin`` (admin:admin)
+  
+ 
