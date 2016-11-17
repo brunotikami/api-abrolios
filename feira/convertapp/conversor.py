@@ -1,13 +1,13 @@
 # -*- coding: utf-8 -*-
-
 import os, sys, csv, sqlite3, glob
+from django.db import connection
 
 
 def main():
     tablename = "feiraapp_feira"
     csvfile = os.getcwd() + '/DEINFO_AB_FEIRASLIVRES_2014.csv' 
-        
-    conn = sqlite3.connect('db.sqlite3') # database file input
+    dbname = connection.get_connection_params()['db']
+    conn = sqlite3.connect(dbname) # database file input
     cur = conn.cursor()
     
     with open(csvfile, "rb") as f:
