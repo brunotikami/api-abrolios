@@ -37,10 +37,19 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'feiraapp',
+    # Third Party
     'rest_framework',
     'django_nose',
+
+    # Local Apps
+    'feiraapp',
+
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 5
+}
 
 # Use nose to run all tests
 TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'

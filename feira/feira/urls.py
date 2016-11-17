@@ -8,7 +8,7 @@ from feiraapp import views
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^feira/$', views.FeiraList.as_view(), name='feira_list'),
-    url(r'^feira/(?P<pk>[0-9]+)/$', views.FeiraDetails.as_view()),
+    url(r'^feira/(?P<pk>[0-9]+)/$', views.FeiraDetails.as_view(), name='feira_details'),
     url(r'^$', RedirectView.as_view(url='/feira/'), name='redirect_to_feira'),
 ]
 

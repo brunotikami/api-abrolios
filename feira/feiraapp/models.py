@@ -7,14 +7,14 @@ class Feira(models.Model):
     """
     id = models.CharField(primary_key=True, \
                                  verbose_name='identificador', max_length=8)
-    longitude = models.CharField(verbose_name='longitude', max_length=10)
-    latitude = models.CharField(verbose_name='latitude', max_length=10)
+    long = models.CharField(verbose_name='longitude', max_length=10)
+    lat = models.CharField(verbose_name='latitude', max_length=10)
     setcens = models.CharField(verbose_name='setor censitário', max_length=15)
     areap = models.CharField(verbose_name='área de ponderação', max_length=13)
     coddist = models.CharField(verbose_name='código do distrito conforme ibge', max_length=9)
     distrito = models.CharField(verbose_name='distrito municipal', max_length=18)
     codsubpref = models.CharField(verbose_name='código da subprefeitura', max_length=2)
-    subpref = models.CharField(verbose_name='subprefeitura', max_length=25)
+    subprefe = models.CharField(verbose_name='subprefeitura', max_length=25)
     regiao5 = models.CharField(verbose_name='região 5', max_length=6)
     regiao8 = models.CharField(verbose_name='região 8', max_length=7)
     nome_feira = models.CharField(verbose_name='nome da feira livre', max_length=30)
