@@ -12,7 +12,6 @@ def main():
     
     with open(csvfile, "rb") as f:
         reader = csv.reader(f)
-        import pdb; pdb.set_trace()
         header = True
         for row in reader:
             if header:
